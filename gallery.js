@@ -30,5 +30,7 @@ function shuffleGallery()
       i = Math.floor(Math.random() * 5);
   }while(i == current);
   current = i;
-  console.log(chico[i]);
+  document.getElementById("picture").src = chico[i].picture;
+  document.getElementById("caption").innerHTML = chico[i].description;
+  document.getElementById("source").innerHTML = "Image courtesy of: " + chico[i].from;
 }
